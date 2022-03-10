@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CC2Shopee</string>
+    <string name="fs_12_discount">12% OFF</string>
+    <string name="fs_price_20000">Rp<b>20.000</b></string>
+</resources>
