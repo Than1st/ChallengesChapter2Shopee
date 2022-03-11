@@ -2,24 +2,19 @@ package com.than.challengeschapter2shopee
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager2.widget.ViewPager2
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.models.SlideModel
 
 
 class MainActivity : AppCompatActivity() {
-    private var modelList = arrayListOf<Int>()
-    lateinit var adapter: ModelAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        loadData()
-    }
-    private fun loadData() {
-        modelList.add(R.drawable.banner1)
-        modelList.add(R.drawable.banner2)
-        modelList.add(R.drawable.banner3)
-
-        var viewPager = findViewById<ViewPager2>(R.id.viewPagervertical)
-        adapter = ModelAdapter(this,modelList)
-        viewPager.adapter = adapter
+        var imageSlider : ImageSlider = findViewById(R.id.imageSlider)
+        var slideModels : MutableList<SlideModel> = arrayListOf()
+        slideModels.add(SlideModel(R.drawable.banner1))
+        slideModels.add(SlideModel(R.drawable.banner2))
+        slideModels.add(SlideModel(R.drawable.banner3))
+        imageSlider.setImageList(slideModels, true)
     }
 }

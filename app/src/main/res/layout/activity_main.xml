@@ -70,12 +70,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPagervertical"
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:orientation="horizontal"
                 android:layout_marginBottom="15dp"
+                app:auto_cycle="true"
+                app:delay="0"
+                app:period="2000"
+                app:corner_radius="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -86,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.15" />
+                app:layout_constraintGuide_percent="0.16" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/info"
